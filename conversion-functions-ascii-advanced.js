@@ -7,34 +7,44 @@ Consult documentation on how to utilize the following methods:
   charCodeAt()
 */
 
+//slice is trying to get rid of prependage such as 0x, or 0b ...
+//second number is the acutal base you are in currently in
+
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
-  // Your code here 
+blob = parseInt(blob.slice(2), 2)
+console.log(blob)
+return `0x${blob.toString(16)}`
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
-  // Your code here 
+  blob = parseInt(blob.slice(2),16)
+  return `0b${blob.toString(2)}`
 }
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
-  // Your code here 
+return String.fromCharCode(blob)
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  // Your code here 
+return String.fromCharCode(blob)
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  // Your code here 
+  return String.fromCharCode(blob)
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  // Your code here 
+  let result = []
+  for(let i = 0; i< blob.length; i++){
+    result.push(blob.charCodeAt(i))
+  }
+  return result
 }
 
 // console.log('Binary to hexadecimal:')
