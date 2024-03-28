@@ -172,3 +172,4 @@ describe('asciiToDecimal: ASCII to decimal conversion', () => {
       expect(asciiToDecimal(asciiArg)).to.have.ordered.members(charCodes)
   })
 })
+//test
